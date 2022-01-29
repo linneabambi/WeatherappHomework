@@ -1,7 +1,3 @@
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?=${city}&appid=${apiKey}&units=metric`;
-let apiKey = "cfecd485617989b8f0add91581222571";
-let textInput = document.querySelector("#cityInput");
-let city = `${textInput.value}`;
 let currentTime = new Date();
 let days = [
   "Sunday",
@@ -24,26 +20,29 @@ if (minute < 10) {
 
 let time = document.querySelector("#timeNow");
 time.innerHTML = day + " " + hour + ":" + minute;
-
 function citySearch(event) {
   event.preventDefault();
   let textInput = document.querySelector("#cityInput");
   let city = document.querySelector("#cityNow");
   city.innerHTML = `${textInput.value}`;
+  search(textInput.value);
 }
-let textInput = document.querySelector("#cityInput");
-let searchForm = document.querySelector("#search-form");
 
+function search(city) {
+  let apiKey = "cfecd485617989b8f0add91581222571";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  console.log(apiUrl);
+
+  axios.get(apiUrl).then(showData);
+}
+
+let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", citySearch);
 
 function showData(response) {
+  event.preventDefault();
   console.log(response.data.main.temp);
-  let apiKey = "cfecd485617989b8f0add91581222571";
-  let textInput = document.querySelector("#cityInput");
-  let city = `${textInput.value}`;
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?=${city}&appid=${apiKey}&units=metric`;
+  let temperature = response.data.main.temp;
   let temp = document.querySelector("#tempC");
+  temp.innerHTML = Math.round(`${temperature}`);
 }
-
-axios.get(`${apiUrl}`).then(showData);
-console.log(apiUrl);
