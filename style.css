@@ -1,0 +1,152 @@
+.container {
+  border: 2px solid gray;
+  width: 1200px;
+  height: 800px;
+  border-radius: 4px;
+  color: white;
+  background: palegreen;
+}
+.minicontainer {
+  border: 2px solid grey;
+  width: 750px;
+  height: 400px;
+  border-radius: 4px;
+  background: #c7e2ef;
+}
+body {
+}
+.navigation {
+  font-family: monospace;
+}
+.outline {
+  border: 3px solid grey;
+  width: 1180px;
+  height: 500px;
+  margin-left: 50px;
+}
+.search {
+  border-radius: 30px;
+  color: blueviolet;
+  background: lightskyblue;
+  transition: all 200ms ease-in-out;
+  font-family: monospace;
+}
+.search:hover {
+  cursor: pointer;
+  color: skyblue;
+  background: blueviolet;
+}
+.place {
+  background: lavenderblush;
+  color: black;
+  position: relative;
+}
+
+.weatherbox {
+  border: 3px solid grey;
+  width: 300px;
+  height: 200px;
+  margin-bottom: 10px;
+  background: whitesmoke;
+  box-shadow: #95ceee 10px 5px 5px;
+  margin-left: 45px;
+  color: black;
+}
+#currentTime {
+  font-size: 20px;
+  color: azure;
+}
+.weatherbox2 {
+  border: 3px solid grey;
+  width: 300px;
+  position: relative;
+  left: 350px;
+  bottom: 184px;
+  height: 200px;
+  margin-bottom: 10px;
+  background: whitesmoke;
+  box-shadow: #95ceee 10px 5px 5px;
+  color: black;
+}
+.day {
+  border: 2px solid grey;
+  border-radius: 30%;
+  width: 125px;
+  padding: 15px 15px;
+  margin: 15px;
+  bottom: 35px;
+  text-align: center;
+  position: relative;
+  right: 5px;
+  color: black;
+  background: lightblue;
+  font-family: monospace;
+}
+
+.info {
+  width: 350px;
+  border: 1px solid grey;
+  position: relative;
+  left: 775px;
+  bottom: 250px;
+  margin-bottom: 10px;
+  font-family: monospace;
+  margin-bottom: 5px;
+
+  color: black;
+  background: #f7f6d9;
+  box-shadow: 6px 3px 3px;
+}
+.time {
+  font-size: 30px;
+  font-family: monospace;
+}
+.weekday {
+  font-size: 20px;
+  font-family: monospace;
+  position: relative;
+  bottom: -30px;
+  left: 10px;
+  color: black;
+}
+.bestwishes {
+  position: relative;
+  left: 700px;
+  font-size: 30px;
+  font-family: monospace;
+  color: blueviolet;
+}
+.location {
+  position: relative;
+  font-size: 25px;
+  font-family: monospace;
+}
+.sunset {
+  position: relative;
+  top: 270px;
+  font-size: 18px;
+  font-family: monospace;
+  color: black;
+}
+.sunrise {
+  position: relative;
+  top: 268px;
+  font-size: 18px;
+  font-family: monospace;
+  color: black;
+}
+.label {
+  font-family: monospace;
+  font-size: 20px;
+  position: relative;
+}
+#celsius {
+}
+#celsius:hover {
+  color: blue;
+}
+#farenheit {
+}
+#farenheit:hover {
+  color: blue;
+}
