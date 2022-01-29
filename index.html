@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container shadow p-3 mb-5 bg-white rounded">
+      <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light navigation">
+          <a class="navbar-brand" href="#">Menu</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="#"
+                  >Home <span class="sr-only">(current)</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Tomorrow</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">10 days</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <form id="search-form">
+        <label class="label" for="form-text">City:</label>
+        <input
+          id="cityInput"
+          type="text"
+          class="place"
+          placeholder="What City are you in?"
+          autocomplete="on"
+        />
+        <input type="submit" class="search" value="Search" />
+      </form>
+      <span class="bestwishes">Have an Awesome day!</span>
+      <div class="outline shadow-sm p-3 mb-5 bg-white rounded">
+        <div class="minicontainer">
+          <span class="location"
+            >Today´s Weather in:<span id="cityNow"> New York</span></span
+          >
+          <br />
+          <span id="timeNow">Thursday 16:00</span>
+          <br />
+          <span
+            ><span id="tempC">19°</span><span id="celsius">°C </span>|<span
+              id="farenheit"
+              >℉</span
+            ></span
+          >
+          <div class="sunrise">Sunrise ☀️ 06:34</div>
+          <div class="sunset">Sunset 🌙 21:56</div>
+          <div class="weatherbox">
+            <div class="10-00">
+              <span class="time"> 10:00 ⛅12ºC </span>
+            </div>
+            <div class="12-00">
+              <span class="time">12:00 ⛅13ºC</span>
+            </div>
+            <div class="14-00">
+              <span class="time"> 14:00 ☁️13ºC</span>
+            </div>
+            <div class="16-00">
+              <span class="time"> 16:00 ☀️14ºC</span>
+            </div>
+
+            <div class="weatherbox2">
+              <div class="18-00">
+                <span class="time"> 18:00 ⛅12ºC </span>
+              </div>
+              <div class="20-00">
+                <span class="time">20:00 ⛅13ºC</span>
+              </div>
+              <div class="22-00">
+                <span class="time"> 22:00 ☁️13ºC</span>
+              </div>
+              <div class="23-59">
+                <span class="time"> 16:00 ☀️14ºC</span>
+              </div>
+            </div>
+          </div>
+          <div class="info">
+            <h3>Today will be a Windy day with a speed of 12/ms💨</h3>
+            <hr />
+            <h3>
+              <strong>It will be over 7ºC</strong> all day! But the wind might
+              make it feel a bit colder anyways
+            </h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col weekday">Mon:</div>
+          <div class="col weekday">Tue:</div>
+          <div class="col weekday">Wen:</div>
+          <div class="col weekday">Thu:</div>
+          <div class="col weekday">Fri:</div>
+          <div class="col weekday">Sat:</div>
+          <div class="col weekday">Sun:</div>
+        </div>
+      </div>
+      <div class="days">
+        <div class="row">
+          <div class="col day shadow-sm p-3 mb-5 bg-white rounded">
+            ☀️14ºC <br />
+            <small>12/ms💨</small>
+          </div>
+          <div class="col day shadow-sm p-3 mb-5 bg-white rounded">
+            ☀️14ºC <br /><small> 12/ms💨</small>
+          </div>
+          <div class="col day shadow-sm p-3 mb-5 bg-white rounded">
+            ☀️14ºC <br /><small> 12/ms💨</small>
+          </div>
+          <div class="col day shadow-sm p-3 mb-5 bg-white rounded">
+            ☀️14ºC <br /><small>12/ms💨</small>
+          </div>
+          <div class="col day shadow-sm p-3 mb-5 bg-white rounded">
+            ☀️14ºC <br /><small> 12/ms💨</small>
+          </div>
+          <div class="col day shadow-sm p-3 mb-5 bg-white rounded">
+            ☀️14ºC <br /><small> 12/ms💨</small>
+          </div>
+          <div class="col day shadow-sm p-3 mb-5 bg-white rounded">
+            ☀️14ºC <br />
+            <small> 12/ms💨</small><br />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
